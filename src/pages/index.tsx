@@ -1,43 +1,33 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import HomepageHero from '@site/src/components/HomepageHero';
+import HomepageSection from '@site/src/components/HomepageSection';
+import HomepageMO from '@site/src/components/HomepageMO';
+import HomepageWhereCapFits from '@site/src/components/HomepageWhereCapFits';
+import HomepageAppModel from '@site/src/components/HomepageAppModel';
+import HomepageRoadmap from '@site/src/components/HomepageRoadmap';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+const LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.';
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+    <Layout description={siteConfig.tagline}>
+      <HomepageHero />
       <main>
-        <HomepageFeatures />
+        <HomepageSection id="mo" title="The CAP M.O." intro={LOREM}>
+          <HomepageMO />
+        </HomepageSection>
+        <HomepageSection id="where-cap-fits" title="Where CAP Fits" intro={LOREM} muted>
+          <HomepageWhereCapFits />
+        </HomepageSection>
+        <HomepageSection id="application-model" title="The CAP Application Model" intro={LOREM}>
+          <HomepageAppModel />
+        </HomepageSection>
+        <HomepageSection id="roadmap" title="Open Source Roadmap" intro={LOREM} muted>
+          <HomepageRoadmap />
+        </HomepageSection>
       </main>
     </Layout>
   );

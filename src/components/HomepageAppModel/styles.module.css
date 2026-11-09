@@ -1,0 +1,91 @@
+.model {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr);
+  gap: 1rem;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.block {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--cap-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--cap-card-shadow);
+}
+
+.blockName {
+  margin: 0 0 0.375rem;
+  font-size: 1.125rem;
+  text-wrap: balance;
+}
+
+.blockText {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  text-wrap: pretty;
+}
+
+.registry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-color: var(--cap-navy);
+  background: var(--cap-navy);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.registry .blockName {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.registry .blockText {
+  color: rgb(255 255 255 / 0.8);
+}
+
+.identity {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* Not built yet: an outline with no fill or lift. */
+.placeholder {
+  border-style: dashed;
+  border-color: var(--ifm-color-emphasis-400);
+  background: transparent;
+  box-shadow: none;
+}
+
+.placeholder .blockName {
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media screen and (max-width: 996px) {
+  .model {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

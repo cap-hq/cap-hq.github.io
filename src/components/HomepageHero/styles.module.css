@@ -1,0 +1,167 @@
+.hero {
+  --cap-navy: #001b6c;
+  --cap-navy-light: #0b2f9a;
+  --cap-sky: #9fb8ff;
+
+  position: relative;
+  overflow: hidden;
+  background: var(--cap-navy);
+  color: #fff;
+  padding: 5rem 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 3rem;
+  max-width: var(--ifm-container-width-xl);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.wordmark {
+  margin: 0;
+  font-size: clamp(4.5rem, 11vw, 8rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+/*
+ * Sits under the wordmark as a lockup, sized at ~0.172x the wordmark so the
+ * two lines run the same width; the tagline follows as its own statement.
+ */
+.fullName {
+  margin: 0.875rem 0 0;
+  font-size: clamp(1.125rem, 1.89vw, 1.375rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: var(--cap-sky);
+}
+
+.tagline {
+  margin: 2.25rem 0 0;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 34rem;
+  margin: 1.5rem 0 0;
+  font-size: 1.125rem;
+  color: rgb(255 255 255 / 0.8);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.25rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: background 150ms, color 150ms;
+}
+
+.primaryButton {
+  background: #fff;
+  color: var(--cap-navy);
+}
+
+.primaryButton:hover {
+  background: var(--cap-sky);
+  border-color: var(--cap-sky);
+  color: var(--cap-navy);
+  text-decoration: none;
+}
+
+.secondaryButton {
+  color: #fff;
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 3px solid var(--cap-sky);
+  outline-offset: 3px;
+}
+
+.secondaryButton:hover {
+  background: rgb(255 255 255 / 0.12);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Keeps the text above Cappy's halo when the layout stacks on narrow screens. */
+.copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* Soft halo keeps Cappy's blue accents from sinking into the navy. */
+.art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.art::before {
+  content: '';
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 115%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(159 184 255 / 0.14) 0%, rgb(11 47 154 / 0.55) 40%, transparent 68%);
+}
+
+.cappy {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .lede {
+    margin-inline: auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .art {
+    order: -1;
+  }
+
+  .cappy {
+    max-width: 180px;
+  }
+}

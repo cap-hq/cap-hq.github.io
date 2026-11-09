@@ -1,0 +1,223 @@
+.timeline {
+  --marker-size: 1.5rem;
+  --rail-size: 3px;
+  --column-gap: 2rem;
+  /* Distance from a column edge to its center, i.e. where each marker sits. */
+  --column-center: calc((100% - 2 * var(--column-gap)) / 6);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--column-gap);
+  /* Same measure as the Application Model, so section edges line up down the page. */
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Future stretch of the rail: dashed, from the first marker to the last. */
+.timeline::before,
+.timeline::after {
+  content: '';
+  position: absolute;
+  top: calc(var(--marker-size) / 2 - var(--rail-size) / 2);
+  left: var(--column-center);
+  height: var(--rail-size);
+  border-radius: var(--rail-size);
+}
+
+.timeline::before {
+  right: var(--column-center);
+  background: repeating-linear-gradient(
+    to right,
+    var(--ifm-color-emphasis-400) 0 8px,
+    transparent 8px 14px
+  );
+}
+
+/* Momentum: a solid stroke leaving "Now" that fades out toward the next milestone. */
+.timeline::after {
+  width: calc((100% - 2 * var(--column-center)) / 4);
+  background: linear-gradient(to right, var(--cap-accent), transparent);
+}
+
+.milestone {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.marker {
+  position: relative;
+  flex: none;
+  width: var(--marker-size);
+  height: var(--marker-size);
+  border: 3px solid var(--cap-accent);
+  border-radius: 50%;
+  background: var(--cap-section-bg);
+}
+
+.current .marker {
+  background: var(--cap-accent);
+  box-shadow: inset 0 0 0 4px var(--cap-section-bg);
+}
+
+/* A single pulsing ring marks where the project is today. */
+.current .marker::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border: 2px solid var(--cap-accent);
+  border-radius: 50%;
+  animation: ping 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  from {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+
+  to {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current .marker::after {
+    animation: none;
+    transform: scale(1.6);
+    opacity: 0.35;
+  }
+}
+
+.label {
+  margin: 1rem 0 2rem;
+  padding: 0.125rem 0.7rem;
+  font-size: 1.2rem;
+  color: var(--cap-accent);
+}
+
+.current .label {
+  border-radius: 999px;
+  background: var(--cap-accent);
+  color: var(--cap-on-accent);
+}
+
+.items {
+  position: relative;
+  flex: 1;
+  align-self: stretch;
+  margin: 0;
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--cap-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--cap-card-shadow);
+  list-style: disc;
+}
+
+/*
+ * Arrow pointing up at the milestone label: a border-colored triangle with a
+ * slightly smaller surface-colored triangle on top, which also covers the
+ * card's border where the arrow meets it.
+ */
+.items::before,
+.items::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.items::before {
+  top: -11px;
+  width: 20px;
+  height: 10px;
+  background: var(--ifm-color-emphasis-300);
+}
+
+.items::after {
+  top: -9px;
+  width: 18px;
+  height: 9px;
+  background: var(--ifm-background-surface-color);
+}
+
+.items li::marker {
+  color: var(--cap-accent);
+}
+
+.items li + li {
+  margin-top: 0.5rem;
+}
+
+/* The current card matches the others, outlined (arrow included) in the accent color. */
+.current .items {
+  border-color: var(--cap-accent);
+}
+
+.current .items::before {
+  background: var(--cap-accent);
+}
+
+/* On phones the timeline turns vertical, rail on the left. */
+@media screen and (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before,
+  .timeline::after {
+    top: calc(0.3rem + var(--marker-size) / 2);
+    left: calc(var(--marker-size) / 2 - var(--rail-size) / 2);
+    width: var(--rail-size);
+  }
+
+  .timeline::before {
+    right: auto;
+    bottom: 0;
+    height: auto;
+    background: repeating-linear-gradient(
+      to bottom,
+      var(--ifm-color-emphasis-400) 0 8px,
+      transparent 8px 14px
+    );
+  }
+
+  .timeline::after {
+    height: 8rem;
+    background: linear-gradient(to bottom, var(--cap-accent), transparent);
+  }
+
+  .milestone {
+    align-items: flex-start;
+  }
+
+  .marker {
+    position: absolute;
+    top: 0.3rem;
+    left: -2.5rem;
+  }
+
+  .label {
+    margin: 0 0 1.25rem;
+  }
+
+  .milestone:not(.current) .label {
+    padding-left: 0;
+  }
+
+  .items::before,
+  .current .items::before,
+  .items::after {
+    display: none;
+  }
+}

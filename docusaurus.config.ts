@@ -7,6 +7,10 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'CAP',
   tagline: 'Stop shifting infrastructure left.',
+  customFields: {
+    // Expansion of the recursive acronym, shown alongside the CAP wordmark.
+    fullName: 'CAP Application Platform',
+  },
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -83,12 +87,6 @@ const config: Config = {
         src: 'img/cappy.svg',
       },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/cap-hq',

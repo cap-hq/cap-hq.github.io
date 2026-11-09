@@ -1,0 +1,54 @@
+.section {
+  --cap-navy: #001b6c;
+  --cap-accent: var(--cap-navy);
+  --cap-on-accent: #fff;
+  --cap-section-bg: var(--ifm-background-color);
+  /* Offset equals blur minus spread, so the shadow never reaches the top or left edge. */
+  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.24);
+  --cap-radius: 0.875rem;
+
+  padding: 5rem 0;
+  background: var(--cap-section-bg);
+  /* Keep in-page links from tucking the heading under the sticky navbar. */
+  scroll-margin-top: var(--ifm-navbar-height);
+}
+
+[data-theme='dark'] .section {
+  --cap-accent: #9fb8ff;
+  --cap-on-accent: var(--cap-navy);
+  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.7);
+}
+
+.muted {
+  --cap-section-bg: var(--ifm-color-emphasis-100);
+}
+
+/* Infima's dark emphasis-100 is nearly the page color; go darker so bands still alternate. */
+[data-theme='dark'] .muted {
+  --cap-section-bg: #141416;
+}
+
+.header {
+  max-width: 44rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  text-wrap: balance;
+}
+
+.intro {
+  margin: 1rem 0 0;
+  font-size: 1.125rem;
+  color: var(--ifm-color-emphasis-700);
+  text-wrap: balance;
+}
+
+@media screen and (max-width: 996px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
