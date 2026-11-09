@@ -13,7 +13,8 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "screenshot": "node scripts/screenshot.mjs"
+    "screenshot": "node scripts/screenshot.mjs",
+    "social-card": "node scripts/social-card.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

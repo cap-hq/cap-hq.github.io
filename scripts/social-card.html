@@ -1,0 +1,95 @@
+<!doctype html>
+<!-- Source for static/img/social-card.png; regenerate with `npm run social-card`. Styles mirror src/components/HomepageHero. -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      :root {
+        --cap-navy: #001b6c;
+        --cap-sky: #9fb8ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 1200px;
+        height: 630px;
+      }
+
+      body {
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 430px;
+        align-items: center;
+        padding: 0 80px 0 88px;
+        background: var(--cap-navy);
+        color: #fff;
+        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wordmark {
+        margin: 0;
+        font-size: 168px;
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: 0.04em;
+      }
+
+      .subtitle {
+        margin: 18px 0 0;
+        font-size: 37px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+        color: var(--cap-sky);
+      }
+
+      .tagline {
+        margin: 48px 0 0;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1.15;
+        text-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
+      }
+
+      /* Soft halo keeps Cappy's blue accents from sinking into the navy. */
+      .art {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .art::before {
+        content: '';
+        position: absolute;
+        inset: 50% auto auto 50%;
+        width: 125%;
+        aspect-ratio: 1;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgb(159 184 255 / 0.14) 0%, rgb(11 47 154 / 0.55) 40%, transparent 68%);
+      }
+
+      .art img {
+        position: relative;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="wordmark">CAP</h1>
+      <p class="subtitle">Application Platform</p>
+      <p class="tagline">Stop shifting<br />infrastructure left.</p>
+    </div>
+    <div class="art">
+      <img src="../static/img/cappy.svg" alt="" />
+    </div>
+  </body>
+</html>
