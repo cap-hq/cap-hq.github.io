@@ -33,12 +33,13 @@
 }
 
 /*
- * Sits under the wordmark as a lockup, sized at ~0.172x the wordmark so the
- * two lines run the same width; the tagline follows as its own statement.
+ * Sits under the wordmark as a lockup, sized at ~0.22x the wordmark so it
+ * ends flush with the right edge of the P; the tagline follows as its own
+ * statement.
  */
-.fullName {
+.subtitle {
   margin: 0.875rem 0 0;
-  font-size: clamp(1.125rem, 1.89vw, 1.375rem);
+  font-size: clamp(1.125rem, 2.42vw, 1.76rem);
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.2;

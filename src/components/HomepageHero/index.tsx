@@ -15,7 +15,7 @@ export default function HomepageHero(): ReactNode {
           <Heading as="h1" className={styles.wordmark}>
             {siteConfig.title}
           </Heading>
-          <p className={styles.fullName}>{siteConfig.customFields?.fullName as string}</p>
+          <p className={styles.subtitle}>{siteConfig.customFields?.subtitle as string}</p>
           <p className={styles.tagline}>{siteConfig.tagline}</p>
           <p className={styles.lede}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -19,7 +19,7 @@ export default function FooterLayout({style, links, logo, copyright}: Props): Re
               <Cappy className={styles.logo} aria-hidden="true" />
               <span className={styles.names}>
                 <span className={styles.wordmark}>{siteConfig.title}</span>
-                <span className={styles.fullName}>{siteConfig.customFields?.fullName as string}</span>
+                <span className={styles.subtitle}>{siteConfig.customFields?.subtitle as string}</span>
               </span>
             </Link>
           </div>

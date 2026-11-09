@@ -8,8 +8,7 @@ const config: Config = {
   title: 'CAP',
   tagline: 'Stop shifting infrastructure left.',
   customFields: {
-    // Expansion of the recursive acronym, shown alongside the CAP wordmark.
-    fullName: 'CAP Application Platform',
+    subtitle: 'Application Platform',
   },
   favicon: 'img/favicon.ico',
 
