@@ -1,0 +1,53 @@
+.card {
+  margin-bottom: 1.5rem;
+  padding: 1.75rem 2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--cap-radius);
+  background: var(--ifm-background-surface-color);
+  box-shadow: var(--cap-card-shadow);
+}
+
+.card header h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.card :global(.markdown) {
+  margin-top: 1.25rem;
+}
+
+.card > footer {
+  align-items: center;
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.card > footer > :global(.col) {
+  padding: 0;
+}
+
+.card > footer > :global(.col) > b {
+  display: none;
+}
+
+/* Cancels the tag list's margin-left--sm, a layered !important utility that can't be overridden directly. */
+.card > footer > :global(.col):has(> b) {
+  margin-left: -0.5rem;
+}
+
+.card > footer li {
+  margin-block: 0.2rem;
+}
+
+.card > footer :global(.text--right) a::after {
+  content: ' →';
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,101 @@
+.masthead {
+  overflow: hidden;
+  background: var(--cap-navy);
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme='dark'] .masthead {
+  background: var(--cap-navy-light);
+}
+
+.inner {
+  --peek-height: 17rem;
+  --peek-drop: 50%;
+
+  position: relative;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-wrap: balance;
+}
+
+.description {
+  margin: 0.875rem 0 0;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--cap-sky);
+  text-wrap: balance;
+}
+
+.extra {
+  margin-top: 1rem;
+}
+
+.extra p {
+  margin-bottom: 0.5rem;
+  color: rgb(255 255 255 / 0.8);
+}
+
+.copy a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-color: rgb(255 255 255 / 0.4);
+}
+
+.copy a:hover {
+  text-decoration-color: #fff;
+}
+
+/* Same halo as the home hero, centered on the visible part of Cappy. */
+.inner::before {
+  --halo-size: 24rem;
+
+  content: '';
+  position: absolute;
+  right: calc(7rem - var(--halo-size) / 2);
+  bottom: calc(3rem - var(--halo-size) / 2);
+  width: var(--halo-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(159 184 255 / 0.14) 0%, rgb(11 47 154 / 0.55) 40%, transparent 68%);
+}
+
+.cappy {
+  position: absolute;
+  right: var(--ifm-spacing-horizontal);
+  bottom: 0;
+  width: auto;
+  height: var(--peek-height);
+  transform: translateY(var(--peek-drop)) rotate(-10deg);
+  transform-origin: bottom center;
+}
+
+@media screen and (max-width: 996px) {
+  .inner {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .inner::before,
+  .cappy {
+    display: none;
+  }
+}

@@ -1,30 +1,48 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --cap-navy: #001b6c;
+  --cap-navy-light: #0b2f9a;
+  --cap-sky: #9fb8ff;
+  --cap-radius: 0.875rem;
+  /* Offset equals blur minus spread, so the shadow never reaches the top or left edge. */
+  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.24);
+
+  --ifm-color-primary: #0b2f9a;
+  --ifm-color-primary-dark: #0a2a8b;
+  --ifm-color-primary-darker: #092883;
+  --ifm-color-primary-darkest: #08216c;
+  --ifm-color-primary-light: #0c34a9;
+  --ifm-color-primary-lighter: #0d36b1;
+  --ifm-color-primary-lightest: #0e3dc8;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.7);
+
+  --ifm-color-primary: #9fb8ff;
+  --ifm-color-primary-dark: #7699ff;
+  --ifm-color-primary-darker: #618aff;
+  --ifm-color-primary-darkest: #235cff;
+  --ifm-color-primary-light: #c8d7ff;
+  --ifm-color-primary-lighter: #dde6ff;
+  --ifm-color-primary-lightest: #ffffff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Link and body colors are too close in lightness to tell apart by color alone. */
+.markdown a:not(.hash-link) {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+  transition: text-decoration-color var(--ifm-transition-fast);
+}
+
+.markdown a:not(.hash-link):hover {
+  text-decoration-color: currentColor;
+}
+
+.theme-code-block {
+  --ifm-code-border-radius: var(--cap-radius);
 }

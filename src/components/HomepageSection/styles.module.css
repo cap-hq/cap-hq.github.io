@@ -1,11 +1,7 @@
 .section {
-  --cap-navy: #001b6c;
   --cap-accent: var(--cap-navy);
   --cap-on-accent: #fff;
   --cap-section-bg: var(--ifm-background-color);
-  /* Offset equals blur minus spread, so the shadow never reaches the top or left edge. */
-  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.24);
-  --cap-radius: 0.875rem;
 
   padding: 5rem 0;
   background: var(--cap-section-bg);
@@ -14,9 +10,8 @@
 }
 
 [data-theme='dark'] .section {
-  --cap-accent: #9fb8ff;
+  --cap-accent: var(--cap-sky);
   --cap-on-accent: var(--cap-navy);
-  --cap-card-shadow: 7px 7px 12px -5px rgb(0 0 0 / 0.7);
 }
 
 .muted {

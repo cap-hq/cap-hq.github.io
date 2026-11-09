@@ -1,6 +1,7 @@
 .footer {
   --ifm-footer-background-color: #1b1d21;
   --ifm-footer-padding-vertical: 3.5rem;
+  --ifm-footer-link-hover-color: var(--cap-sky);
 
   background-color: var(--ifm-footer-background-color);
   -webkit-font-smoothing: antialiased;

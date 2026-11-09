@@ -52,6 +52,8 @@ const config: Config = {
             'https://github.com/cap-hq/cap-hq.github.io/tree/main/',
         },
         blog: {
+          blogTitle: 'CAP Field Notes',
+          blogDescription: 'Notes from building CAP in the open.',
           showReadingTime: true,
           feedOptions: {
             type: ['rss', 'atom'],
@@ -67,7 +69,7 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/custom.css', './src/css/blog.css'],
         },
       } satisfies Preset.Options,
     ],

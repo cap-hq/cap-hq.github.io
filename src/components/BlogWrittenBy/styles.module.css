@@ -1,0 +1,14 @@
+.panel {
+  margin-top: 3rem;
+  padding: 1.5rem 1.75rem 0.75rem;
+  border-radius: var(--cap-radius);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.heading {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-700);
+}

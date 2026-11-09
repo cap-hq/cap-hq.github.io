@@ -1,0 +1,60 @@
+.blog-wrapper a[rel='tag']:not(:has(> span)) {
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.blog-wrapper aside nav {
+  & > div:first-child {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ifm-color-emphasis-700);
+  }
+
+  & h3 {
+    font-size: 0.95rem;
+    color: var(--ifm-color-emphasis-800);
+  }
+
+  & li a {
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--ifm-color-emphasis-200);
+  }
+
+  & li a[aria-current='page'] {
+    border-left-color: var(--ifm-color-primary);
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 997px) {
+  :is(.blog-list-page, .blog-tags-post-list-page, .blog-authors-posts-page) main.col {
+    --ifm-col-width: calc(9 / 12 * 100%);
+  }
+
+  .blog-wrapper aside:has(nav) {
+    padding-right: 2rem;
+    border-right: 1px solid var(--ifm-color-emphasis-200);
+  }
+
+  .blog-wrapper aside:has(nav) + main {
+    padding-left: 2rem;
+  }
+}
+
+.blog-wrapper .pagination-nav__link {
+  border-radius: var(--cap-radius);
+}
+
+.blog-wrapper .avatar__intro a svg {
+  filter: saturate(0.35);
+  opacity: 0.75;
+  transition: filter var(--ifm-transition-fast), opacity var(--ifm-transition-fast);
+}
+
+.blog-wrapper .avatar__intro a:hover svg {
+  filter: none;
+  opacity: 1;
+}
