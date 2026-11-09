@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcap_hq=self.webpackChunkcap_hq||[]).push([["220"],{1912(s){s.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"CAP Field Notes","authorsListPath":"/blog/authors"}')}}]);
