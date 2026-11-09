@@ -8,21 +8,21 @@ type Tile = {
   description: string;
 };
 
-// Each inner array renders as one centered row; tiles size to their content.
+// Tiles split each row evenly, so alternating two- and three-tile rows staggers
+// the seams. Longer copy belongs in the two-tile rows to keep row heights even.
 const TileRows: Tile[][] = [
   [
-    {title: 'Lorem ipsum', description: 'Dolor sit amet, consectetur adipiscing elit.'},
-    {title: 'Sed do eiusmod', description: 'Tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.'},
-    {title: 'Ut enim', description: 'Quis nostrud exercitation.'},
+    {title: 'App-centric model', description: 'CAP thinks about applications like app devs. Applications are modeled as a collection of high-level resources, not as raw infra.'},
+    {title: 'One platform spanning multiple clouds', description: 'GCP, AWS and Azure are already supported, with more on the way. App devs don\'t need to be experts in any of them.'},
   ],
   [
-    {title: 'Duis aute irure', description: 'Dolor in reprehenderit in voluptate velit esse cillum dolore.'},
-    {title: 'Excepteur sint', description: 'Occaecat cupidatat non proident.'},
-    {title: 'Sunt in culpa', description: 'Qui officia deserunt mollit anim id est laborum, sed ut perspiciatis.'},
+    {title: 'Enterprise-class governance', description: 'All change is coerced through a single auditable path.'},
+    {title: 'Multiple resource types', description: 'Databases, object storage buckets, caches, streaming topics and more.'},
+    {title: 'Minimal cognitive load', description: 'CAP uses implicit contracts for access, workload identity and networking.'},
   ],
   [
-    {title: 'Nemo enim', description: 'Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.'},
-    {title: 'Neque porro', description: 'Quisquam est qui dolorem ipsum.'},
+    {title: 'Opinionated externals, adaptable internals', description: 'While the platform interface is simple, CAP resource adapters can front a wide variety of infra technologies.'},
+    {title: 'Safe for agents', description: 'By eliminating access to raw infra, CAP reduces context collapse and stops agentic mistakes (like deleting prod databases!)'},
   ],
 ];
 

@@ -16,7 +16,7 @@ export default function Home(): ReactNode {
     <Layout description={siteConfig.tagline}>
       <HomepageHero />
       <main>
-        <HomepageSection id="mo" title="The CAP M.O." intro={LOREM}>
+        <HomepageSection id="mo" title="The CAP M.O." intro="Let's dig into CAP's core ethos.">
           <HomepageMO />
         </HomepageSection>
         <HomepageSection id="where-cap-fits" title="Where CAP Fits" intro={LOREM} muted>
