@@ -1,19 +1,49 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+cap:
+  label: CAP
+  permalink: /cap
+  description: Cloud Application Platform news, capabilities, releases, and updates
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+application-registry:
+  label: Application Registry
+  permalink: /application-registry
+  description: Application Registry capabilities, updates, and guidance
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+compute:
+  label: Compute
+  permalink: /compute
+  description: CAP compute capabilities, deployment, and application runtime
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+databases:
+  label: Databases
+  permalink: /databases
+  description: Database services, capabilities, and guidance for applications running on CAP
+
+kafka:
+  label: Kafka
+  permalink: /kafka
+  description: Kafka capabilities, integrations, and guidance for applications running on CAP
+
+developer-experience:
+  label: Developer Experience
+  permalink: /developer-experience
+  description: Tools and capabilities that simplify how developers build, deploy, and operate applications with CAP
+
+security:
+  label: Security
+  permalink: /security
+  description: CAP security capabilities, practices, and guidance
+
+open-source:
+  label: Open Source
+  permalink: /open-source
+  description: CAP open source projects, releases, and community updates
+
+tutorials:
+  label: Tutorials
+  permalink: /tutorials
+  description: Tutorials and practical guidance for building, deploying, and operating applications with CAP
+
+kubecon:
+  label: KubeCon
+  permalink: /kubecon
+  description: CAP news, demos, announcements, and updates from KubeCon
