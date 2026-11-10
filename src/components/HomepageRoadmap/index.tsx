@@ -14,21 +14,15 @@ const Milestones: Milestone[] = [
   {
     label: 'Now',
     current: true,
-    items: ['Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor', 'Incididunt ut labore'],
+    items: ['Registry API', 'Source released under the Apache 2.0 license',],
   },
   {
     label: 'Early 2027',
-    items: ['Ut enim ad minim veniam', 'Quis nostrud exercitation', 'Ullamco laboris nisi'],
+    items: ['Service API and App Identity API', 'Builds available in public registries',],
   },
   {
     label: 'Late 2027',
-    items: [
-      'Duis aute irure dolor',
-      'In reprehenderit in voluptate',
-      'Velit esse cillum dolore',
-      'Excepteur sint occaecat',
-      'Sunt in culpa qui officia',
-    ],
+    items: ['Database, Bucket, Topic, and Cache APIs', 'All development moves to the open source organization', 'Project governance is established',],
   },
 ];
 

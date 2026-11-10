@@ -8,7 +8,11 @@ import HomepageWhereCapFits from '@site/src/components/HomepageWhereCapFits';
 import HomepageAppModel from '@site/src/components/HomepageAppModel';
 import HomepageRoadmap from '@site/src/components/HomepageRoadmap';
 
-const LOREM = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.';
+const capHeader = 'A human and agent friendly alternative to traditional infrastructure automation, built on top of the CNFC landscape.';
+
+const applicationModelHeader = "CAP's control plane splits applications into their constituent resources: services, databases, buckets and so on. Each resource is backed by an abstract model that CAP adapts into specific underlying technologies.";
+
+const roadmapHeader = 'We want to build CAP with the community.';
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
@@ -19,13 +23,13 @@ export default function Home(): ReactNode {
         <HomepageSection id="mo" title="The CAP M.O." intro="Let's dig into CAP's core ethos.">
           <HomepageMO />
         </HomepageSection>
-        <HomepageSection id="where-cap-fits" title="Where CAP Fits" intro={LOREM} muted>
+        <HomepageSection id="where-cap-fits" title="Where CAP Fits" intro={capHeader} muted>
           <HomepageWhereCapFits />
         </HomepageSection>
-        <HomepageSection id="application-model" title="The CAP Application Model" intro={LOREM}>
+        <HomepageSection id="application-model" title="The CAP Application Model" intro={applicationModelHeader}>
           <HomepageAppModel />
         </HomepageSection>
-        <HomepageSection id="roadmap" title="Open Source Roadmap" intro={LOREM} muted>
+        <HomepageSection id="roadmap" title="Open Source Roadmap" intro={roadmapHeader} muted>
           <HomepageRoadmap />
         </HomepageSection>
       </main>

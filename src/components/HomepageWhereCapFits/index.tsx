@@ -12,13 +12,13 @@ type Comparison = {
 
 const Comparisons: Comparison[] = [
   {
-    title: 'Existing Platform Tech',
-    points: ['Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Sed do eiusmod tempor', 'Incididunt ut labore'],
+    title: 'Business as Usual',
+    points: ['Forces app devs to be infra experts', 'Tightly couples apps to specific clouds', 'Tries to expose as many knobs as possible', 'Permits change from many directions'],
   },
   {
-    title: 'CAP',
+    title: 'The CAP Approach',
     highlight: true,
-    points: ['Ut enim ad minim veniam', 'Quis nostrud exercitation', 'Ullamco laboris nisi', 'Ut aliquip ex ea commodo'],
+    points: ['Makes the platform responsible for infra complexity', 'Keeps apps abstract and portable across clouds', 'Hides most (not all) knobs', 'Coerces all changes through a single auditable path'],
   },
 ];
 
