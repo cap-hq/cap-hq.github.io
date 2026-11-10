@@ -1,56 +1,46 @@
 ---
 slug: welcome-to-cap
-title: Welcome to the CAP Blog 👋
+title: Welcome to CAP Field Notes 👋
 description: Welcome to CAP. We're building a simpler way to build, deploy, and operate modern applications, while also working toward open source.
 authors: [nina,michael]
 tags: [cap, open-source, kubecon, developer-experience]
 hide_table_of_contents: false
 ---
 
-# Welcome to the CAP blog
+# Welcome to CAP Field Notes
 
-Wheather you scanned a QR code at our KubeCon booth, or perhaps found our one-pager floating around the conferance, either way congrats! You've officially found your way to the CAP documents. Not a ton to share just yet, this is the ground floor of an exciting new venture. 
+Whether you chatted with us at our booth, caught our keynote, or perhaps simply found our one-pager floating around KubeCon this year in Salt Lake City, congrats! You've officially found your way to CAP's online home. We'll be sharing a lot more about CAP as we gear up our open sourcing efforts, and by checking in over this way, you'll be the first to know.
 
-We are so happy you're here.
+{/* truncate */}
 
 CAP is a fully managed, self-service platform for deploying, hosting, and managing the building blocks of modern applications: services, databases, object storage buckets, streaming topics, caches, and more.
 
-With CAP, all developers need to get started is a single container image.
+With CAP, all you need to get started is a single container image. **The platform handles the rest.**
 
-**The platform handles the rest.**
+## The Road to Open Source
 
-## Working toward open source
+This week at KubeCon, we've announced our intent to make CAP open source. While we're excited for the challenge, it would be negligent to ignore the scope of the undertaking. We've built a fully functional platform heavily used within a complex enterprise, and while open sourcing CAP was always part of the plan, it'll take time for us to get everything ready for a future of open collaboration.
 
-This week at Kubecon we are announcing our intent to make CAP open source.
+Rather than waiting to open source all of CAP at once, we're taking a deliberate approach of releasing CAP component by component. The hardest part of open sourcing will come as we move all of our internal development processes and project management to be external and fully public. As a result, each component we open source will follow the same basic trajectory: first, the code will be made available under the Apache 2.0 license but in a read-only mode; next, we'll wire up public CI and artifact hosting; finally, we'll open the doors for public contribution and move all of our project management into the appropriate publicly accessible tooling.
 
-More information on our intention map can be found on the [home page](docs/intro.mdx) of this site. 
+We're getting the ball rolling this week with the heart of CAP, its Registry API. The Registry API manages application metadata and teams, and serves as the basis for platform authentication. We'll be posting about it in more detail later this week.
 
-While we are very much looking forward to this new challenge, it would be negligent to not acknowledge reality in planning. The road to open source for CAP is not a straight line. 
+We believe our incremental approach will permit us to get CAP open sourced more quickly than waiting for everything to line up. We're hopeful it will also let us solicit meaningful feedback from the community much earlier in the process.
 
-We built a fully functional platform within a large, complex enterprise, with a fair amount of business logic built in. That foundation has made us successful here, but it also means repackaging everything for the open source community will take a substantial investment of time, and that time must be balanced against the needs of our business users. 
+## You May Be Early!
 
-Rather than waiting for everything to be perfectly packaged, we'll release usable pieces of the platform as they're ready, starting this week with [Registry API]() 
-
-This approach lets us deliver quicker, showcase the value of every API of our platform, keep users engaged (hopefully), and fold in feedback as we go. 
-
-## You may have found us early
-
-If you're reading this before Wednesday's [KubeCon keynote](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1302691), you've gotten a little sneak peek.
+If you're reading this before [Wednesday's keynote](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1302691), you're getting a little sneak peak!
 
 We'll be sharing much more about why we built CAP, what we've learned along the way, why we're thinking about application platforms differently in the age of AI agents, and why we believe taking CAP into the open is the right next step.
 
-A deeper version of the CAP story is also coming Wednesday to the [CVS Health Tech Blog](https://medium.com/cvs-health-tech-blog). We'll share the deep link after it has been formally published. 
+A longer version of the CAP story is also coming Wednesday to the [CVS Health Tech Blog](https://medium.com/cvs-health-tech-blog). We'll share a link here after it has been formally published. 
 
+## While You're Here...
 
-## While you're here...
+We'll use this site to share more of the CAP story as we go, including detailed platform architecture, design decisions, open source progress, experiments, lessons learned, and probably a few things that didn't go according to plan. Because if we're going to do this in the open, we should actually do this in the open.
 
-We'll use this site to share more of the CAP story as we go, including our architecture, design decisions, open source progress, experiments, lessons learned, and probably a few things that didn't go according to plan.
+- [Check out CAP on GitHub](https://github.com/cap-hq).
+- If you're at KubeCon NA 2026, come say hi at the booth! We are in the Cosmic Canyon, right next to the Project Pavilion.
+- Check back for more blog posts and updates this week.
 
-Because if we're going to do this in the open, we may as well actually do it in the open.
-
-- [Check out CAP on GitHub](https://github.com/cap-hq)
-- If you're at KubeCon, come say hi at the booth (we are in the Cosmic Canyon, right next to the Project Pavilion)
-- Check back for more blog posts and updates this week
-
-Thanks for reading, we're glad you found us.
-
+Thanks for reading. We're so happy you're here!
