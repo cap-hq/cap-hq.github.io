@@ -12,21 +12,21 @@ type Block = {
 
 const Registry: Block = {
   name: 'Registry API',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  description: 'Create applications, manage teams, and authenticate with the platform.',
 };
 
 const ResourceApis: Block[] = [
-  {name: 'Service API', description: 'Lorem ipsum dolor sit amet.'},
-  {name: 'Database API', description: 'Consectetur adipiscing elit.'},
-  {name: 'Bucket API', description: 'Sed do eiusmod tempor.'},
-  {name: 'Topic API', description: 'Incididunt ut labore.'},
-  {name: 'Cache API', description: 'Et dolore magna aliqua.'},
-  {name: 'TBD', description: 'Ut enim ad minim veniam.', placeholder: true},
+  {name: 'Service API', description: 'Deploy and manage containerized backends, frontends, and more.'},
+  {name: 'Database API', description: 'Provision and operate Postgres databases.'},
+  {name: 'Bucket API', description: 'Provision and manage object storage buckets.'},
+  {name: 'Topic API', description: 'Create and manage Kafka streaming topics.'},
+  {name: 'Cache API', description: 'Provision and operate Redis caches.'},
+  {name: 'Future APIs', description: 'The abstractions will continue until morale improves.', placeholder: true},
 ];
 
 const AppIdentity: Block = {
   name: 'App Identity API',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  description: 'Cloud native identity and access management for resources across an application.',
 };
 
 function ModelBlock({name, description, placeholder, className}: Block & {className?: string}) {
