@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcap_hq=self.webpackChunkcap_hq||[]).push([["833"],{5513(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Welcome to CAP Field Notes \u{1F44B}","permalink":"/blog/welcome-to-cap","unlisted":false,"date":"2026-11-10T00:00:00.000Z"}]}')}}]);
